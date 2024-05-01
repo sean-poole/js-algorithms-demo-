@@ -4,7 +4,7 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 */
 
 
-// Built-in methods: 
+// BUILT-IN METHODS: 
 /* Slowest */
 // function reverseString(text) {
 //   return text.split("").reverse().join("");
@@ -16,7 +16,7 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 // }
 
 
-// For Loop: 
+// FOR LOOP: 
 // function reverseString(text) {
 //   let result = "";
 
@@ -28,7 +28,7 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 // }
 
 
-// For Of: 
+// FOR OF: 
 // function reverseString(text) {
 //   let result = "";
 
@@ -40,7 +40,7 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 // }
 
 
-// Recursion: 
+// RECURSION: 
 function reverseString(text) {
   if (text === "") {
     return "";
