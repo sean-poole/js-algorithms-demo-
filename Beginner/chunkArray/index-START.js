@@ -39,16 +39,16 @@
 
 
 // SLICE METHOD (fastest): 
-// function chunkArray(array, size) {
-//   let result = [];
+function chunkArray(array, size) {
+  let result = [];
 
-//   for (let i = 0; i < array.length; i += size) {
-//     let subarray = array.slice(i, i + size);
-//     result.push(subarray);
-//   }
+  for (let i = 0; i < array.length; i += size) {
+    let subarray = array.slice(i, i + size);
+    result.push(subarray);
+  }
 
-//   return result;
-// }
+  return result;
+}
 
 
 // RECURSION (slowest): 
