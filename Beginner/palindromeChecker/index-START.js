@@ -5,9 +5,33 @@ e.g palindromeChecker('racecar') // will return true
 
 
 
+// INTUITIVE APPROACH (slowest): 
+// function palindromeChecker(text) {
+//   return text.toLowerCase() === text.toLowerCase().split("").reverse().join("");
+// }
 
+
+// LOOPING AND COMPARING CHARACTERS: 
+// function palindromeChecker(text) {
+//   let charArray = text.toLowerCase().split("");
+
+//   let result = charArray.every((letter, index) => {
+//     return letter === charArray[charArray.length - index - 1];
+//   });
+
+//   return result;
+// }
+
+
+// LOOPING AND COMPARING CHARACTERS OPTIMIZED (fastest): 
 function palindromeChecker(text) {
-    // Code goes here
+  let textLength = text.length;
+
+  for (let i = 0; i < textLength / 2; i++) {
+    if (text[i] !== text[textLength - i - 1]) return false;
+  }
+
+  return true;
 }
 
 
