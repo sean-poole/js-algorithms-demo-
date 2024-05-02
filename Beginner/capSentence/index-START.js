@@ -5,11 +5,30 @@ return the equivalent of the sentence when capitalised. E.g
 */
 
 
+// FOR-EACH: 
+// function capSentence(text) {
+//   let words = text.toLowerCase().split(" ");
+//   let capsArray = [];
+
+//   words.forEach(word => capsArray.push(word[0].toUpperCase() + word.slice(1)));
+
+//   return capsArray.join(" ");
+// }
 
 
+// MAP AND SLICE (fastest): 
 function capSentence(text) {
-   // Code goes here
+  return text.toLowerCase().split(" ").map(word => word[0].toUpperCase() + word.slice(1)).join(" ");
 }
+
+
+// MAP AND REPLACE (slowest): 
+// function capSentence(text) {
+//   let words = text.toLowerCase().split(" ");
+//   let capsArray = words.map(word => word.replace(word[0], word[0].toUpperCase()));
+
+//   return capsArray.join(" ");
+// }
 
 
 
